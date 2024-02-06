@@ -13,11 +13,11 @@ import java.time.LocalTime;
  * @author MR.k0F31n
  */
 @RestController
-@RequestMapping("ad/schedule/create")
+@RequestMapping("ad/schedule")
 @RequiredArgsConstructor
 public class AdministrationController {
     private final TimeSlotService timeSlotService;
-    @PostMapping
+    @PostMapping(path = "/create")
     @ResponseStatus(HttpStatus.CREATED)
     public void createdSchedule(@RequestParam Long idDoctor,
                                 @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date,
