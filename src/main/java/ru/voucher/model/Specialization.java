@@ -6,7 +6,7 @@ package ru.voucher.model;
 public enum Specialization {
     Аккулист,
     Отоларинголог,
-    Тарепевт,
+    Терапевт,
     Хирург,
     Стоматолог,
     Офтальмолог,

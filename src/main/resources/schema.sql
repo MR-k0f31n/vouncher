@@ -30,6 +30,6 @@ CREATE TABLE IF NOT EXISTS time_slots
     doctor_id bigint references doctors(id) not null,
     patient_id bigint references patients(id),
     date date not null,
-    start_time timestamp with time zone not null,
-    end_time timestamp with time zone not null
+    start_time time not null,
+    end_time time not null
 );

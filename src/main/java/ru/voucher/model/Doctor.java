@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.UUID;
 
 /**
  * @author MR.k0F31n
@@ -19,7 +20,7 @@ public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long uuid;
+    private UUID uuid;
     @Column(nullable = false)
     private String firstname;
     @Column(nullable = false)

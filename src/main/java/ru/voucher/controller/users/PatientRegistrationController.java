@@ -7,7 +7,6 @@ import ru.voucher.dto.TimeSlotInfo;
 import ru.voucher.service.TimeSlotService;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 /**

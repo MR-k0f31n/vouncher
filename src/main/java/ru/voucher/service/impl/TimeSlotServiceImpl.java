@@ -74,6 +74,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
         //инициализируем первый талон
         TimeSlot timeSlot = new TimeSlot();
         timeSlot.setDoctor(doctor);
+        timeSlot.setDate(date);
         timeSlot.setStartTime(startTime);
         timeSlot.setEndTime(startTime.plusMinutes(timeReceipt));
 
@@ -86,6 +87,8 @@ public class TimeSlotServiceImpl implements TimeSlotService {
         while (previousEndTime.isBefore(shiftEndTime)) {
             LocalTime nexEndTime = previousEndTime.plusMinutes(timeReceipt).plusMinutes(5);
             TimeSlot nextTimeSlot = new TimeSlot();
+            nextTimeSlot.setDoctor(doctor);
+            nextTimeSlot.setDate(date);
             nextTimeSlot.setStartTime(previousEndTime.plusMinutes(5)); // Добавляем для завершения текущего приёма
             nextTimeSlot.setEndTime(nexEndTime);
             previousEndTime = nexEndTime;
