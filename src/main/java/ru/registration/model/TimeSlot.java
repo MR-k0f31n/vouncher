@@ -1,4 +1,4 @@
-package ru.voucher.model;
+package ru.registration.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

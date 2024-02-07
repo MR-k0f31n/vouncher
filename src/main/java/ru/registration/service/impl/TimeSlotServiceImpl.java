@@ -1,26 +1,26 @@
-package ru.voucher.service.impl;
+package ru.registration.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.voucher.dto.TimeSlotInfo;
-import ru.voucher.exeption.NotFoundException;
-import ru.voucher.exeption.ValidatorException;
-import ru.voucher.mapper.TimeSlotMapper;
-import ru.voucher.model.Doctor;
-import ru.voucher.model.Patient;
-import ru.voucher.model.TimeSlot;
-import ru.voucher.repository.DoctorRepository;
-import ru.voucher.repository.PatientRepository;
-import ru.voucher.repository.TimeSlotRepository;
-import ru.voucher.service.TimeSlotService;
+import ru.registration.dto.TimeSlotInfo;
+import ru.registration.exeption.NotFoundException;
+import ru.registration.exeption.ValidatorException;
+import ru.registration.mapper.TimeSlotMapper;
+import ru.registration.model.Doctor;
+import ru.registration.model.Patient;
+import ru.registration.model.TimeSlot;
+import ru.registration.repository.DoctorRepository;
+import ru.registration.repository.PatientRepository;
+import ru.registration.repository.TimeSlotRepository;
+import ru.registration.service.TimeSlotService;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static ru.voucher.mapper.TimeSlotMapper.toDto;
+import static ru.registration.mapper.TimeSlotMapper.toDto;
 
 /**
  * @author MR.k0F31n

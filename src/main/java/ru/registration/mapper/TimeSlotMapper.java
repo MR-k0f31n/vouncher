@@ -1,7 +1,7 @@
-package ru.voucher.mapper;
+package ru.registration.mapper;
 
-import ru.voucher.dto.TimeSlotInfo;
-import ru.voucher.model.TimeSlot;
+import ru.registration.dto.TimeSlotInfo;
+import ru.registration.model.TimeSlot;
 
 /**
  * @author MR.k0F31n
@@ -11,7 +11,7 @@ public class TimeSlotMapper {
         return TimeSlotInfo.builder()
                 .fullNamePatient(timeSlot.getPatient().getFirstname() + " " + timeSlot.getPatient().getLastname())
                 .fullNameDoctor(timeSlot.getDoctor().getFirstname() + " " + timeSlot.getDoctor().getLastname())
-                .Specialization(timeSlot.getDoctor().getSpecialization().toString())
+                .specialization(timeSlot.getDoctor().getSpecialization().toString())
                 .startTime(timeSlot.getStartTime())
                 .date(timeSlot.getDate())
                 .build();
@@ -21,7 +21,7 @@ public class TimeSlotMapper {
         return TimeSlotInfo.builder()
                 .id(timeSlot.getId())
                 .fullNameDoctor(timeSlot.getDoctor().getFirstname() + " " + timeSlot.getDoctor().getLastname())
-                .Specialization(timeSlot.getDoctor().getSpecialization().toString())
+                .specialization(timeSlot.getDoctor().getSpecialization().toString())
                 .startTime(timeSlot.getStartTime())
                 .date(timeSlot.getDate())
                 .build();

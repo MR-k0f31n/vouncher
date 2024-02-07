@@ -1,10 +1,10 @@
-package ru.voucher.controller.users;
+package ru.registration.controller.users;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
-import ru.voucher.dto.TimeSlotInfo;
-import ru.voucher.service.TimeSlotService;
+import ru.registration.dto.TimeSlotInfo;
+import ru.registration.service.TimeSlotService;
 
 import java.time.LocalDate;
 import java.util.List;

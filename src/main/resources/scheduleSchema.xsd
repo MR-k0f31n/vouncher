@@ -1,0 +1,45 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://ru.registration"
+           targetNamespace="http://ru.registration"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="TimeSlotInfo">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="fullNameDoctor" type="xs:string"/>
+            <xs:element name="fullNamePatient" type="xs:string"/>
+            <xs:element name="specialization" type="xs:string"/>
+            <xs:element name="date" type="xs:date"/>
+            <xs:element name="startTime" type="xs:time"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="timeSlotStatus">
+        <xs:sequence>
+            <xs:element name="status" type="xs:string"/>
+            <xs:element name="message" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:element name="getCreateScheduleRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="idDoctor" type="xs:long"/>
+                <xs:element name="date" type="xs:date"/>
+                <xs:element name="startTime" type="xs:time"/>
+                <xs:element name="shiftEndTime" type="xs:time"/>
+                <xs:element name="timeReceipt" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getCreateScheduleResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="timeSlotStatus" type="tns:timeSlotStatus" />
+                <xs:element name="timeSlot" type="tns:TimeSlotInfo" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

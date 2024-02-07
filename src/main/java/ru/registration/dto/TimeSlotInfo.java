@@ -1,4 +1,4 @@
-package ru.voucher.dto;
+package ru.registration.dto;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -17,7 +17,7 @@ public class TimeSlotInfo {
     private Long id;
     private String fullNamePatient;
     private String fullNameDoctor;
-    private String Specialization;
+    private String specialization;
     private LocalDate date;
     private LocalTime startTime;
 }

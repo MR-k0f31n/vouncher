@@ -1,12 +1,12 @@
-package ru.voucher.controller.exeption;
+package ru.registration.controller.exeption;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import ru.voucher.exeption.NotFoundException;
-import ru.voucher.exeption.ValidatorException;
+import ru.registration.exeption.NotFoundException;
+import ru.registration.exeption.ValidatorException;
 
 import java.util.Map;
 

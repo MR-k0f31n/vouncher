@@ -1,12 +1,12 @@
-package ru.voucher.repository;
+package ru.registration.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ru.voucher.model.Patient;
+import ru.registration.model.Doctor;
 
 /**
  * @author MR.k0F31n
  */
 @Repository
-public interface PatientRepository extends JpaRepository<Patient, Long> {
+public interface DoctorRepository extends JpaRepository<Doctor, Long> {
 }

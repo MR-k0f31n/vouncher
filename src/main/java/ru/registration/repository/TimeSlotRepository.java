@@ -1,8 +1,8 @@
-package ru.voucher.repository;
+package ru.registration.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ru.voucher.model.TimeSlot;
+import ru.registration.model.TimeSlot;
 
 import java.time.LocalDate;
 import java.util.List;

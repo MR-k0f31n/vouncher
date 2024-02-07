@@ -1,4 +1,4 @@
-package ru.voucher.exeption;
+package ru.registration.exeption;
 
 /**
  * @author MR.k0F31n

@@ -1,4 +1,4 @@
-package ru.voucher.model;
+package ru.registration.model;
 
 /**
  * @author MR.k0F31n

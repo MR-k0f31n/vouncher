@@ -1,6 +1,6 @@
-package ru.voucher.service;
+package ru.registration.service;
 
-import ru.voucher.dto.TimeSlotInfo;
+import ru.registration.dto.TimeSlotInfo;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

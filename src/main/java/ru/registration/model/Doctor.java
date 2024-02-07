@@ -1,4 +1,4 @@
-package ru.voucher.model;
+package ru.registration.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,11 +12,11 @@ import java.util.UUID;
  * @author MR.k0F31n
  */
 @Entity
-@Table(name = "patients")
+@Table(name = "doctors")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Patient {
+public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,9 +25,9 @@ public class Patient {
     private String firstname;
     @Column(nullable = false)
     private String lastname;
-    @Column(name = "birthday")
-    private LocalDate birthDay;
-    @Column(name = "number_phone", nullable = false)
-    private String numberPhone;
-    private String email;
+    @Column(name = "specification")
+    @Enumerated(EnumType.STRING)
+    private Specialization specialization;
+    @Column(name = "employment_date")
+    private LocalDate employmentDate;
 }
