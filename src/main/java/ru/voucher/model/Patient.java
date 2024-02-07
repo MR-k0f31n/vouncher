@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 /**
@@ -14,9 +13,9 @@ import java.util.UUID;
  */
 @Entity
 @Table(name = "patients")
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,9 +27,7 @@ public class Patient {
     private String lastname;
     @Column(name = "birthday")
     private LocalDate birthDay;
-    @Column(name = "date_last_appointment")
-    private LocalDateTime lastTimeAppointment;
     @Column(name = "number_phone", nullable = false)
-    private Integer numberPhone;
+    private String numberPhone;
     private String email;
 }

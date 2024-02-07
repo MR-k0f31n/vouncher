@@ -5,14 +5,16 @@ import org.springframework.stereotype.Repository;
 import ru.voucher.model.TimeSlot;
 
 import java.time.LocalDate;
-import java.util.Optional;
+import java.util.List;
 
 /**
  * @author MR.k0F31n
  */
 @Repository
 public interface TimeSlotRepository extends JpaRepository<TimeSlot, Long> {
-    Optional<TimeSlot> findAllByDoctorIdAndDateAndPatientIdIsNull(Long idDoctor, LocalDate date);
+    List<TimeSlot> findAllByDoctorIdAndDateAndPatientIdIsNull(Long idDoctor, LocalDate date);
 
-    Optional<TimeSlot> findAllByPatientId(Long id);
+    List<TimeSlot> findAllByPatientId(Long id);
+
+    Boolean existsByDateAndDoctorId(LocalDate data, Long idDoctor);
 }

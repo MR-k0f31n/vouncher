@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS doctors CASCADE;
-DROP TABLE IF EXISTS patients CASCADE;
-DROP TABLE IF EXISTS time_slots CASCADE;
+--DROP TABLE IF EXISTS doctors CASCADE;
+--DROP TABLE IF EXISTS patients CASCADE;
+--DROP TABLE IF EXISTS time_slots CASCADE;
 
 CREATE TABLE IF NOT EXISTS doctors
 (
@@ -19,7 +19,6 @@ CREATE TABLE IF NOT EXISTS patients
     firstname varchar(255) not null,
     lastname varchar(255) not null,
     birthday date not null,
-    date_last_appointment date,
     number_phone varchar(10) not null,
     email varchar(255)
 );

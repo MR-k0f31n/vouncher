@@ -16,4 +16,14 @@ public class TimeSlotMapper {
                 .date(timeSlot.getDate())
                 .build();
     }
+
+    public static TimeSlotInfo toDtoFreeTimeSlot(TimeSlot timeSlot) {
+        return TimeSlotInfo.builder()
+                .id(timeSlot.getId())
+                .fullNameDoctor(timeSlot.getDoctor().getFirstname() + " " + timeSlot.getDoctor().getLastname())
+                .Specialization(timeSlot.getDoctor().getSpecialization().toString())
+                .startTime(timeSlot.getStartTime())
+                .date(timeSlot.getDate())
+                .build();
+    }
 }
