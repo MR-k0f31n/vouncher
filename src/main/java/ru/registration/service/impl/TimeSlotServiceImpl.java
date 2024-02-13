@@ -67,7 +67,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
     }
 
     @Override
-    public void createSchedule(Long idDoctor, LocalDate date, LocalTime startTime, LocalTime shiftEndTime, Integer timeReceipt) {
+    public Integer createSchedule(Long idDoctor, LocalDate date, LocalTime startTime, LocalTime shiftEndTime, Integer timeReceipt) {
         //первоначальные проверки
         if (date.isBefore(LocalDate.now()) || startTime.isAfter(shiftEndTime))
             throw new ValidatorException("Invalid date '" + date + "'  or start time receipt '" + startTime + "'");
@@ -84,6 +84,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
         if (timeSlot.getEndTime().isAfter(shiftEndTime))
             throw new ValidatorException("Time receipt after shift end time");
         timeSlotRepository.save(timeSlot);
+        int countTimeSlot = 1;
 
         LocalTime previousEndTime = timeSlot.getEndTime().plusMinutes(timeReceipt);
         //Проверка что вмещаемся в смену врача
@@ -96,6 +97,8 @@ public class TimeSlotServiceImpl implements TimeSlotService {
             timeSlot.setEndTime(nexEndTime);
             previousEndTime = nexEndTime;
             timeSlotRepository.save(timeSlot);
+            countTimeSlot++;
         }
+        return countTimeSlot;
     }
 }

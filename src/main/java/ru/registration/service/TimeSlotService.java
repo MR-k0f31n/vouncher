@@ -35,5 +35,5 @@ public interface TimeSlotService {
      * Create a doctor's schedule according to the transmitted schedule for a specific date.
      * Transmitted Long id doctor, LocalDate Reception day, LocalTime Doctor's start time, LocalTime Doctor's end time, Integer time receipt in minutes
      */
-    void createSchedule(Long idDoctor, LocalDate date, LocalTime startTime, LocalTime ShiftEndTime, Integer timeReceipt);
+    Integer createSchedule(Long idDoctor, LocalDate date, LocalTime startTime, LocalTime ShiftEndTime, Integer timeReceipt);
 }

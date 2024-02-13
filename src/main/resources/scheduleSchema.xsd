@@ -14,14 +14,6 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="timeSlotStatus">
-        <xs:sequence>
-            <xs:element name="status" type="xs:string"/>
-            <xs:element name="message" type="xs:string"/>
-        </xs:sequence>
-    </xs:complexType>
-
-
     <xs:element name="getCreateScheduleRequest">
         <xs:complexType>
             <xs:sequence>
@@ -37,8 +29,8 @@
     <xs:element name="getCreateScheduleResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="timeSlotStatus" type="tns:timeSlotStatus" />
                 <xs:element name="timeSlot" type="tns:TimeSlotInfo" />
+                <xs:element name="countTimeSlot" type="xs:int"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

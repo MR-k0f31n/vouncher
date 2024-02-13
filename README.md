@@ -7,11 +7,12 @@
     * spring boot
     * spring JPA
     * PostgreSQL
+    * SOAP
 ---
 ## Предоставляемый сервис:
 * Составить расписание приёма врача
 
-      enpoint: hosts/ad/schedule/create
+      SOAP enpoint: hosts/ad/schedule/create
       Принимаемы параметры: 
       Long id - доктора
       LacalDate date - дата приёма
